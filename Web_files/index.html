@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+   <title>Making the Web</title>
+</head>
+<body>
+   <div class="row">
+      <div class="col-md-8">
+         <div class="image-box">
+            <h1>Play Music</h1>
+            <div class="partner-logo">
+               <img src="./images/logos/14877.png" alt="">
+               <img src="./images/logos/1716045.png" alt="">
+               <img src="./images/logos/585bbb44cb11b227491c32b1-itunes.png" alt="">
+               <img src="./images/logos/YouTube-Music.png" alt="">
+            </div>
+         </div>
+      </div>
+      <div class="col-md-4">
+         <di class="form-container">
+            <div class="menu">
+               <button type="button" id="loginbtn" onclick="openlogintab()">Login</button>
+               <button type="button" id="registerbtn" onclick="openregistertab()">Register</button>
+            </div>
+            <div class="form-box">
+               <div id="login-tab">
+                  <h1>I've an account</h1>
+                  <input type="text" placeholder="username">
+                  <input type="password" placeholder="password">
+                  <button type="button">Log In</button>
+               </div>
+               <div id="register-tab">
+                  <h1>I am a new user</h1>
+                  <input type="text" placeholder="username">
+                  <input type="email" placeholder="email">
+                  <input type="password" placeholder="password">
+                  <button type="button">Sign Up</button>
+               </div>
+            </div>
+         </di>
+      </div>
+   </div>
+   <script>
+      function openregistertab() {
+         document.getElementById("register-tab").style.display="block";
+         document.getElementById("login-tab").style.display="none";
+         document.getElementById("registerbtn").style.borderBottom="3px solid #c200ff";
+         document.getElementById("loginbtn").style.borderBottom="none";
+      }
+      function openlogintab() {
+         document.getElementById("login-tab").style.display="block";
+         document.getElementById("register-tab").style.display="none";
+         document.getElementById("loginbtn").style.borderBottom="3px solid #c200ff";
+         document.getElementById("registerbtn").style.borderBottom="none";
+      }
+   </script>
+</body>
+</html>
